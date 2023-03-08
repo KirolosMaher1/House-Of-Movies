@@ -17,10 +17,10 @@ export default function navbar({crrUser, clrUser}) {
           <Link className="nav-link text-muted" to="home">Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-muted" to="movies">Movies</Link>
+          <Link className="nav-link text-muted" to="movies">Trending Movies</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-muted" to="Tvshows">Tv Shows</Link>
+          <Link className="nav-link text-muted" to="Tvshows">Trending Tv Shows</Link>
         </li>
      
       </ul> : '' }

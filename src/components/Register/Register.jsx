@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Joi from 'joi';
 import React, { useState }  from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 
@@ -53,7 +53,7 @@ export default function Register() {
     }
     else{
 
-    let {data} = await axios.post('https://route-egypt-api.herokuapp.com/signup', user)
+    let {data} = await axios.post('https://route-movies-api.vercel.app/signup', user)
     console.log(data);
 
     if(data.errors){
@@ -107,7 +107,10 @@ export default function Register() {
       {getCurrentError('password')}
       </div>}
 
-    <button onClick={submitForm} className='btn btn-outline-info'>Register</button>
+    <button onClick={submitForm} type="submit" className='btn btn-outline-info'>Register</button>
+    <div className='d-flex justify-content-center align-items-center my-5'>
+      <p>You Already Have An Acoount ? <Link to="/login">LogIn</Link></p>
+    </div>
   </form>
   </div>
   

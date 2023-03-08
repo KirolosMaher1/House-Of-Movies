@@ -1,5 +1,6 @@
 import React, { useEffect,useState} from 'react';
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 
 export default function Home() {
@@ -29,10 +30,15 @@ export default function Home() {
       </div>
       {tvArray.map( (tv , idx) => <div key={idx} className="col-md-2">
 
-        <div className='tv'>
+      <div key={idx} className='"col-md-2"'>
+      <Link to={`/TvDetails/${tv.id}`}>
+        <div key={idx} className='tv "col-md-2"'>
           <img className='w-100' src={`https://image.tmdb.org/t/p/original/${tv.poster_path}`} alt="" />
-          <h5>{tv.name}</h5>
+          <h5 className='p-1'>{tv.name}</h5>
         </div>
+        </Link>
+        </div>
+        
 
 
 
